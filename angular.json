@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "angular-jira:build:production",
+            "firebaseProject": "jiraffa-93ce4",
+            "firebaseHostingSite": "jiraffa-93ce4"
+          }
         }
       }
     }
