@@ -1,0 +1,28 @@
+{
+  "root": "apps/nx-apollo-e2e",
+  "sourceRoot": "apps/nx-apollo-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/nx-apollo-e2e/cypress.json",
+        "devServerTarget": "nx-apollo:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "nx-apollo:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nx-apollo-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["nx-apollo"]
+}

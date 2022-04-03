@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "nx-apollo": "apps/nx-apollo",
+    "nx-apollo-e2e": "apps/nx-apollo-e2e"
+  }
+}
